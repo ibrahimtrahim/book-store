@@ -1,11 +1,10 @@
 import express from "express";
 import mongoose, { trusted } from "mongoose";
 import bookRoute from "./routes/booksRoute.js";
+import {PORT, mongoDBURL} from './config.js';
 import cors from 'cors';
 
 const app = express()
-const PORT = 5555;
-const mongoDBURL = "mongodb+srv://trahimbrahim:1rH4oeFOE0ZRJSQu@book-store.tw3ul.mongodb.net/book-collection?retryWrites=true&w=majority&appName=Book-store"
 
 // Middleware for parsing request body
 app.use(express.json());
